@@ -47,7 +47,7 @@ public interface ConfidenceIntervalForecaster {
   /**
    * Returns true if this forecaster is computing confidence
    * limits for some or all of its future forecasts (i.e. 
-   * getCalculateConfIntervalsForForecasts() > 0).
+   * getCalculateConfIntervalsForForecasts() {@literal >} 0).
    * 
    * @return true if confidence limits will be produced for some
    * or all of its future forecasts.

@@ -162,7 +162,7 @@ public class TimeSeriesForecasting extends BaseStep {
   /**
    * Set the base 64 encoded forecaster.
    *
-   * @param encodedForecaster a base 64 encoded List<Object> containing the
+   * @param encodedForecaster a base 64 encoded List{@literal <}Object{@literal >} containing the
    *          forecaster and header
    */
   @ProgrammaticProperty
@@ -173,7 +173,7 @@ public class TimeSeriesForecasting extends BaseStep {
   /**
    * Gets the base 64 encoded forecaster
    *
-   * @return a base 64 string encoding a List<Object> that contains the
+   * @return a base 64 string encoding a List{@literal <}Object{@literal >} that contains the
    *         forecasting model and the header
    */
   public String getEncodedForecaster() {
@@ -877,10 +877,10 @@ public class TimeSeriesForecasting extends BaseStep {
    * Instances object containing the structure of the data used to train the
    * forecaster) from a base 64 string.
    *
-   * @param base64encoded a List<Object> containing forecaster and header
+   * @param base64encoded a List{@literal <}Object{@literal >} containing forecaster and header
    *          encoded as a base 64 string
    *
-   * @return the decoded List<Object> containing forecaster and header
+   * @return the decoded List{@literal <}Object{@literal >} containing forecaster and header
    * @throws Exception if there is a problem decoding
    */
   @SuppressWarnings("unchecked")
@@ -972,7 +972,7 @@ public class TimeSeriesForecasting extends BaseStep {
 
   /**
    * Encode the model and header into a base 64 string. A List
-   * <Object> containing first the model and then the header is encoded.
+   * {@literal <}Object{@literal >} containing first the model and then the header is encoded.
    *
    * @param model the forecasting model to encode
    * @param header empty instances object containing just the structure of the

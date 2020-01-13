@@ -55,7 +55,7 @@ public abstract class AbstractForecaster implements TSForecaster,
    * A utility method for converting a List of Strings to a single
    * comma separated String.
    * 
-   * @param list the List<String> object to process
+   * @param list the List{@literal <String>} object to process
    * @return a single String containing a comma separated list of
    * elements from the original list.
    */
@@ -158,10 +158,10 @@ public abstract class AbstractForecaster implements TSForecaster,
 
   /**
    * Run the supplied object using the supplied options on the command line.
+   * throws Exception if the supplied object is not an instance of TSForecaster.
    * 
    * @param toRun the object to run.
    * @param options the command line options to pass to the object.
-   * @throws Exception if the supplied object is not an instance of TSForecaster.
    */
   public void run(Object toRun, String[] options) throws IllegalArgumentException {
     if (!(toRun instanceof TSForecaster)) {

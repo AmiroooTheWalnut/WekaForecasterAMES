@@ -240,8 +240,8 @@ public class JFreeChartDriver extends GraphDriver {
   /**
    * Return the graph encapsulated in a panel.
    * 
-   * @param width the width in pixels of the graph
-   * @param height the height in pixels of the graph
+   * width the width in pixels of the graph
+   * height the height in pixels of the graph
    * @param forecaster the forecaster
    * @param preds an ErrorModule that contains predictions for all targets for
    *          the specified step ahead. Targets are in the same order returned

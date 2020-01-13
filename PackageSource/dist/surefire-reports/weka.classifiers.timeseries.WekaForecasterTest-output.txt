@@ -1,15 +1,15 @@
 Transforming input data...
-Nov 05, 2019 12:50:02 AM com.github.fommil.netlib.ARPACK <clinit>
+Jan 05, 2020 8:40:41 PM com.github.fommil.netlib.ARPACK <clinit>
 WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemARPACK
-Nov 05, 2019 12:50:02 AM com.github.fommil.jni.JniLoader liberalLoad
-INFO: successfully loaded C:\Users\user\AppData\Local\Temp\jniloader5141608492748698510netlib-native_ref-win-x86_64.dll
-Nov 05, 2019 12:50:03 AM com.github.fommil.netlib.BLAS <clinit>
+Jan 05, 2020 8:40:41 PM com.github.fommil.jni.JniLoader liberalLoad
+INFO: successfully loaded C:\Users\user\AppData\Local\Temp\jniloader4504710243303376494netlib-native_ref-win-x86_64.dll
+Jan 05, 2020 8:40:41 PM com.github.fommil.netlib.BLAS <clinit>
 WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
-Nov 05, 2019 12:50:03 AM com.github.fommil.jni.JniLoader load
+Jan 05, 2020 8:40:41 PM com.github.fommil.jni.JniLoader load
 INFO: already loaded netlib-native_ref-win-x86_64.dll
-Nov 05, 2019 12:50:03 AM com.github.fommil.netlib.LAPACK <clinit>
+Jan 05, 2020 8:40:41 PM com.github.fommil.netlib.LAPACK <clinit>
 WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
-Nov 05, 2019 12:50:03 AM com.github.fommil.jni.JniLoader load
+Jan 05, 2020 8:40:41 PM com.github.fommil.jni.JniLoader load
 INFO: already loaded netlib-native_ref-win-x86_64.dll
 Computing confidence intervals...
 Computing confidence intervals: processed 20 instances...

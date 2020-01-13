@@ -219,10 +219,10 @@ public class TimeSeriesForecasting extends JPanel implements BeanCommon,
    * Instances object containing the structure of the data used to train the
    * forecaster) from a base 64 string.
    * 
-   * @param base64encoded a List<Object> containing forecaster and header
+   * @param base64encoded a List{@literal <}Object{@literal >} containing forecaster and header
    *          encoded as a base 64 string
    * 
-   * @return the decoded List<Object> containing forecaster and header
+   * @return the decoded List{@literal <}Object{@literal >} containing forecaster and header
    * @throws Exception if there is a problem decoding
    */
   public static List<Object> getForecaster(String base64encoded)
@@ -245,7 +245,7 @@ public class TimeSeriesForecasting extends JPanel implements BeanCommon,
   /**
    * Set the base 64 encoded forecaster.
    * 
-   * @param encodedForecaster a base 64 encoded List<Object> containing the
+   * @param encodedForecaster a base 64 encoded List{@literal <}Object{@literal >} containing the
    *          forecaster and header
    */
   public void setEncodedForecaster(String encodedForecaster) {
@@ -255,7 +255,7 @@ public class TimeSeriesForecasting extends JPanel implements BeanCommon,
   /**
    * Gets the base 64 encoded forecaster
    * 
-   * @return a base 64 string encoding a List<Object> that contains the
+   * @return a base 64 string encoding a List{@literal <}Object{@literal >} that contains the
    *         forecasting model and the header
    */
   public String getEncodedForecaster() {
@@ -499,7 +499,7 @@ public class TimeSeriesForecasting extends JPanel implements BeanCommon,
   }
 
   /**
-   * Encode the model and header into a base 64 string. A List<Object>
+   * Encode the model and header into a base 64 string. A List{@literal <}Object{@literal >}
    * containing first the model and then the header is encoded.
    * 
    * @param model the forecasting model to encode

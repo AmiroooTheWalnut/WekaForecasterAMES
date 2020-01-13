@@ -47,7 +47,7 @@ public interface TSForecaster {
    * Save underlying classifier
    *
    * @param filepath the path of the file to save the base model to
-   * @throws Exception
+   * @throws java.lang.Exception
    */
   public void saveBaseModel(String filepath) throws Exception;
 
@@ -55,7 +55,7 @@ public interface TSForecaster {
    * Load serialized classifier
    *
    * @param filepath the path of the file to load the base model from
-   * @throws Exception
+   * @throws java.lang.Exception
    */
   public void loadBaseModel(String filepath) throws Exception;
 
@@ -73,6 +73,7 @@ public interface TSForecaster {
 
   /**
    * Load state into model.
+   * @param previousState
    */
   public void setPreviousState(List<Object> previousState);
 
@@ -85,17 +86,17 @@ public interface TSForecaster {
 
   /**
    * Serialize model state
-   *
+   * 
    * @param filepath the path of the file to save the model state to
-   * @throws Exception
+   * @throws java.lang.Exception
    */
   public void serializeState(String filepath) throws Exception;
 
   /**
    * Load serialized model state
-   *
+   * 
    * @param filepath the path of the file to save the model state from
-   * @throws Exception
+   * @throws java.lang.Exception
    */
   public void loadSerializedState(String filepath) throws Exception;
 
@@ -115,11 +116,12 @@ public interface TSForecaster {
   
   /**
    * Set the names of the fields/attributes in the data to forecast.
+   * throws Exception if a field(s) can't be found, or if multiple
+   * fields are specified and this forecaster can't predict multiple 
+   * fields.
    * 
    * @param targets a list of names of fields to forecast
-   * @throws Exception if a field(s) can't be found, or if multiple
-   * fields are specified and this forecaster can't predict multiple
-   * fields.
+   * @throws java.lang.Exception
    */
   public void setFieldsToForecast(String targets) throws Exception;
   
@@ -132,16 +134,17 @@ public interface TSForecaster {
   
   /**
    * Builds a new forecasting model using the supplied training
-   * data. The instances in the data are assumed to be sorted in
+   * data.The instances in the data are assumed to be sorted in
    * ascending order of time and equally spaced in time. Some
    * methods may not need to implement this method and may
    * instead do their work in the primeForecaster method.
+   * throws Exception if the model can't be constructed for some
+   * reason.
    * 
    * @param insts the training instances.
    * @param progress an optional varargs parameter supplying progress objects
    * to report/log to
-   * @throws Exception if the model can't be constructed for some
-   * reason.
+   * @throws java.lang.Exception
    */
   public void buildForecaster(Instances insts, 
       PrintStream... progress) throws Exception;
@@ -149,26 +152,28 @@ public interface TSForecaster {
   /**
    * Supply the (potentially) trained model with enough historical
    * data, up to and including the current time point, in order
-   * to produce a forecast. Instances are assumed to be sorted in
+   * to produce a forecast.Instances are assumed to be sorted in
    * ascending order of time and equally spaced in time.
+   * throws Exception if the model can't be primed for some
+   * reason.
    * 
    * @param insts the instances to prime the model with
-   * @throws Exception if the model can't be primed for some
-   * reason.
+   * @throws java.lang.Exception
    */
   public void primeForecaster(Instances insts) throws Exception;  
   
   /**
-   * Produce a forecast for the target field(s). 
-   * Assumes that the model has been built
-   * and/or primed so that a forecast can be generated.
+   * Produce a forecast for the target field(s).
+   * Assumes that the model has been built and/or primed so that
+   * a forecast can be generated.
+   * throws Exception if the forecast can't be produced for some reason.
    * 
    * @param numSteps number of forecasted values to produce for each target. E.g.
    * a value of 5 would produce a prediction for t+1, t+2, ..., t+5.
    * @param progress an optional varargs parameter supplying progress objects
    * to report/log to
    * @return a List of Lists (one for each step) of forecasted values for each target
-   * @throws Exception if the forecast can't be produced for some reason.
+   * @throws java.lang.Exception
    */
   public List<List<Prediction>> forecast(int numSteps, 
       PrintStream... progress) throws Exception;

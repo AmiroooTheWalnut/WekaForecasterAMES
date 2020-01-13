@@ -358,7 +358,7 @@ public class HoltWinters extends AbstractClassifier implements
    * Get the length of a "year", i.e. the number of seasons for the seasonal
    * cycle
    * 
-   * @param length the number of seasons in a cycle
+   * length the number of seasons in a cycle
    */
   public int getSeasonCycleLength() {
     return m_seasonCycleLength;
@@ -403,7 +403,7 @@ public class HoltWinters extends AbstractClassifier implements
   /**
    * Set whether to exclude the trend correction
    * 
-   * @param s true if the trend correction is to be excluded
+   * @param t true if the trend correction is to be excluded
    */
   public void setExcludeTrendCorrection(boolean t) {
     m_includeTrend = !t;
@@ -466,7 +466,7 @@ public class HoltWinters extends AbstractClassifier implements
   /**
    * Get the trend smoothing factor
    * 
-   * @param t the trend smoothing factor
+   * t the trend smoothing factor
    */
   public double getTrendSmoothingFactor() {
     return m_beta;

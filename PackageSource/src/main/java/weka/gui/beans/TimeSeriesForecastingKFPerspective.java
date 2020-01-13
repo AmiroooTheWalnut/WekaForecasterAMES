@@ -159,7 +159,7 @@ public class TimeSeriesForecastingKFPerspective extends JPanel implements Knowle
   /**
    * Set instances (if the perspective accepts them)
    * 
-   * @param insts the instances
+   * @param inst the instances
    */
   public void setInstances(Instances inst) {
     if (m_forecastingPanel != null) {

@@ -34,7 +34,7 @@ import java.util.GregorianCalendar;
  * matches any value for a particular field. Each CustomPeriodicTest
  * is made up of one or two test parts. If the first test part's operator
  * is "=", then no second part is necessary. Otherwise the first test part
- * may use > or >= operators and the second test part < or <= operators.
+ * may use {@literal >} or {@literal >}= operators and the second test part {@literal <} or {@literal <}= operators.
  * Taken together, the two parts define an interval. An optional label
  * may be associated with the interval.
  * 
@@ -146,7 +146,7 @@ public class CustomPeriodicTest implements Serializable {
     /**
      * Evaluate the supplied date against this bound. Handles
      * date fields that are cyclic (such as month, day of week etc.)
-     * so that intervals such as oct < date < mar evaluate correctly.
+     * so that intervals such as oct {@literal <} date {@literal <} mar evaluate correctly.
      * 
      * @param d the date to test
      * @param other the other bound
